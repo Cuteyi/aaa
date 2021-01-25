@@ -1,121 +1,199 @@
-云函数快速部署京东脚本
+# 不要fork! 请点亮Star
+
+## 特别声明: 
+
+* 本仓库发布的Script项目中涉及的任何解锁和解密分析脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
+
+* 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
+
+* lxk0301对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害.
+
+* 间接使用脚本的任何用户，包括但不限于建立VPS或在某些行为违反国家/地区法律或相关法规的情况下进行传播, lxk0301 对于由此引起的任何隐私泄漏或其他后果概不负责.
+
+* 请勿将Script项目的任何内容用于商业或非法目的，否则后果自负.
+
+* 如果任何单位或个人认为该项目的脚本可能涉嫌侵犯其权利，则应及时通知并提供身份证明，所有权证明，我们将在收到认证文件后删除相关脚本.
+
+* 任何以任何方式查看此项目的人或直接或间接使用该Script项目的任何脚本的使用者都应仔细阅读此声明。lxk0301 保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或Script项目的规则，则视为您已接受此免责声明.
+
+ **您必须在下载后的24小时内从计算机或手机中完全删除以上内容.**  </br>
+> ***您使用或者复制了本仓库且本人制作的任何脚本，则视为`已接受`此声明，请仔细阅读*** 
+
+## Script脚本列表
+#### 说明
+1. 其中 [jd_bean_sign.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_sign.js) 可N个京东账号，Node.js专用，核心脚本是JD_DailyBonus.js， IOS软件用户请使用NobyDa的 [JD_DailyBonus.js](https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js)
+2. 以字母排序。
+
+| 活动时长 | 名称                            | 脚本                                                                                                   |
+| -------- | --------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 长期   | 京豆变动通知                | [jd_bean_change.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js)       |
+| 长期   | 领京豆额外奖励&抢京豆   | [jd_bean_home.js](https://raw.githubusercontent.com/lxk0302/jd_scripts/master/jd_bean_home.js)           |
+| 长期   | 京东多合一签到             | [jd_bean_sign.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_sign.js)           |
+| 长期   | 东东超市兑换奖品          | [jd_blueCoin.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js)             |
+| 长期   | 口袋书店                      | [jd_bookshop.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bookshop.js)             |
+| 长期   | 京东汽车赛点兑换京豆    | [jd_car_exchange.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car_exchange.js)     |
+| 长期   | 签到领现金    | [jd_cash.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_cash.js)     |
+| 长期   | 京东汽车签到                | [jd_car.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js)                       |
+| 长期   | 摇京豆                         | [jd_club_lottery.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js)     |
+| 长期   | 疯狂的JOY挂机                | [jd_crazy_joy_coin.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_crazy_joy_coin.js) |
+| 长期   | 疯狂的JOY日常任务          | [jd_crazy_joy.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_crazy_joy.js)           |
+| 长期   | 京东金融-天天提鹅         | [jd_daily_egg.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js)           |
+| 长期   | 京喜工厂                      | [jd_dreamFactory.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js)     |
+| 长期   | 东东农场                      | [jd_fruit.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js)                   |
+| 长期   | 宠汪汪                         | [jd_joy.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js)                       |
+| 长期   | 获取所有互助码             | [jd_get_share_code.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_get_share_code.js) |
+| 长期   | 东东工厂                      | [jd_jdfactory.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js)           |
+| 长期   | 京东赚赚                      | [jd_jdzz.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js)                     |
+| 长期   | 宠汪汪单独喂食             | [jd_joy_feedPets.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js)     |
+| 长期   | 宠汪汪强制为好友助力（iOS端专用） | [jd_joy_help.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_help.js)             |
+| 长期   | 宠汪汪聚宝盆辅助脚本（iOS端专用） | [jd_petTreasureBox.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_petTreasureBox.js) |
+| 长期   | 宠汪汪兑换奖品             | [jd_joy_reward.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js)         |
+| 长期   | 宠汪汪赛跑助力             | [jd_joy_run.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js)               |
+| 长期   | 宠汪汪偷好友狗粮与积分 | [jd_joy_steal.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js)           |
+| 长期   | 宠汪汪                         | [jd_joy.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js)                       |
+| 长期   | 京喜农场                      | [jd_jxnc.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxnc.js)                     |
+| 长期   | 京东快递签到                | [jd_kd.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js)                         |
+| 长期   | 京东直播                      | [jd_live.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live.js)                     |
+| 长期   | 京东抽奖机                   | [jd_lotteryMachine.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_lotteryMachine.js) |
+| 长期   | 摇钱树                         | [jd_moneyTree.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js)           |
+| 长期   | 点点券                         | [jd_necklace.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js)             |
+| 长期   | 东东萌宠                      | [jd_pet.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js)                       |
+| 长期   | 金融养猪                      | [jd_pigPet.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js)                 |
+| 长期   | 种豆得豆                      | [jd_plantBean.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js)           |
+| 长期   | 京东排行榜签到得京豆    | [jd_rankingList.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_rankingList.js)       |
+| 长期   | 全民开红包                   | [jd_redPacket.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js)           |
+| 长期   | 进店领豆                      | [jd_shop.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js)                     |
+| 长期   | 东东小窝                      | [jd_small_home.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js)         |
+| 长期   | 天天加速                      | [jd_speed.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js)                   |
+| 长期   | 东东超市                      | [jd_superMarket.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js)       |
+| 长期   | 十元街                         | [jd_syj.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_syj.js)                       |
+| 长期   | 注销京东会员卡             | [jd_unbind.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unbind.js)                 |
+| 长期   | 取关京东店铺和商品       | [jd_unsubscribe.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js)       |
+| 长期   | 京喜签到       | [jx_sign.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jx_sign.js)       |
+
+搬运脚本
+1.  【[@yangtingxiao](https://github.com/yangtingxiao)】京东抽奖机([jd_lotteryMachine.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_lotteryMachine.js))
+2.  【[@yangtingxiao](https://github.com/yangtingxiao)】京东排行榜([jd_rankingList.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_rankingList.js))
+
+**脚本兼容: [QuantumultX](https://apps.apple.com/us/app/quantumult-x/id1443988620), [Surge](https://apps.apple.com/us/app/surge-4/id1442620678), [Loon](https://apps.apple.com/us/app/loon/id1373567447), 小火箭, JSBox, Node.js**
+
+**TODO**
+- [x] 所有活动互助码在一个脚本打印
+- [ ] 京喜工厂添加预测N天后可兑换功能
+
+## 邀请码互助
+  - [邀请码互助入口](https://github.com/lxk0301/jd_scripts/discussions)
+  - [获取各类活动互助码脚本 jd_get_share_code.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_get_share_code.js)
+  - [邀请码使用规范](githubAction.md#互助码类环境变量)(仅限云端)
+## 食用方法
+
+### 方法一：本地安装Node.js，下载本库脚本
+
+  - 教程请见：[EvineDeng/jd-base](https://github.com/EvineDeng/jd-base)，适用于以下系统：
+
+    1. Armbian/OpenWrt/Debian/Ubuntu/CentOS/Fedora/RedHat等Linux系统
+
+    2. Android
+
+    3. MacOS
+
+### 方法二：云服务器、腾讯云函数等等
+
+  - 需自行有云服务器，云函数等
+  - 腾讯云云函数 [快速部署教程](./backUp/tencentscf.md)（免费）
+  - 腾讯云云函数控制台使用 [教程说明](./backUp/iCloud.md)
+  - 腾讯云云函数 [GitHub Action部署教程](./backUp/tencentscf.md#github-action-部署)
+       
+ 
+### 方法三：Docker（NAS或VPS用户）
+
+ - 可以精确控制任务运行时间，有二种办法：[docker办法一](https://github.com/lxk0301/jd_scripts/tree/master/docker)、[docker办法二（和本地安装Node.js类似）](https://github.com/EvineDeng/jd-base)
+ - [环境变量集合](https://github.com/lxk0301/jd_scripts/blob/master/githubAction.md)
+ 
+#### 注：以上三种运行机制都是Node.js，故您需仔细阅读下面几点
 
 
-本地安装依赖使用serverless部署，点这里
+  - 如果使用方法一与方法二，需自行提供京东cookie填写到 [jdCookie.js](https://github.com/lxk0301/jd_scripts/blob/master/jdCookie.js) 里面
 
-Github Action 部署点这里
+   
+  - 获取京东cookie教程可参考 [浏览器获取京东cookie教程](https://github.com/lxk0301/jd_scripts/blob/master/backUp/GetJdCookie.md) , [插件获取京东cookie教程](https://github.com/lxk0301/jd_scripts/blob/master/backUp/GetJdCookie2.md)
 
+  - 京东APP扫码获取cookie(此种方式获取的cookie有效期为90天)(执行`node getJDCookie.js`即可)
+    
+  - 方法三Docker安装Cookie请见各自的说明。
 
+### 方法四：iOS系统的代理软件（QuantumultX, Surge, Loon, 小火箭）
 
+  - [京东cookie获取脚本 JD_extra_cookie.js](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/JD_extra_cookie.js)
 
-1. 安装 Node.js 环境
-Node.js 环境 下载地址 ，根据自己的操作系统下载和安装。
+```
+# QuantumultX
 
-2. 下载代码
-点击红框处下载压缩包
+#东东农场
+5 6-18/6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js, tag=东东农场, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdnc.png, enabled=true
 
+#东东萌宠
+15 6-18/6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js, tag=东东萌宠, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png, enabled=true
 
-3. 安装依赖，配置 cookie
+# 种豆得豆
+1 7-21/2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js, tag=种豆得豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzd.png, enabled=true
 
-3.1 安装依赖
-压缩包解压后进入项目文件夹
+#天天加速
+8 */3 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js, tag=京东天天加速, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdjs.png, enabled=true
 
-Windows 用户按住  shift 点击右键，点击 在此处打开命令窗口
+#京东摇钱树
+3 */2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js, tag=京东摇钱树, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyqs.png, enabled=true
 
-Mac 用户通过终端，自行进入该文件夹
+#京东宠汪汪
+15 */2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js, tag=京东宠汪汪, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
 
-在命令行内输入 npm i ，等待运行完成。
-此时，项目文件夹内会多出一个 node_modules文件夹
+#宠汪汪偷好友积分与狗粮
+0 0,6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js, tag=宠汪汪偷好友积分与狗粮, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
 
-3.2 配置 cookie
-打开项目文件内的 jdCookie.js
-在最上面的 CookieJDs里写入 cookie ，多个账号以逗号分隔
-例如
-let CookieJDs = [
-  'pt_key=xxx;pt_pin=xxx;', 
-  'pt_key=zzz;pt_pin=zzz;',
-  'pt_key=aaa;pt_pin=xxxaaa'
-]
+#京东宠汪汪喂食
+15 */1 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js, tag=京东宠汪汪喂食, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
 
-注：获取京东 cookie 教程参考 浏览器获取京东cookie教程 , 插件获取京东cookie教程
+#宠汪汪积分兑换奖品
+0 0-16/8,12 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js, tag=宠汪汪积分兑换奖品, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
 
+# 宠汪汪邀请助力与赛跑助力
+15 10 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js, tag=宠汪汪邀请助力与赛跑助力, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+ 
+#京小超
+11 1-23/5 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=京小超, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true
 
-4. 部署到云函数
+#京小超兑换奖品
+0 0 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京小超兑换奖品, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true
 
-4.1 开通服务
-依次登录 SCF 云函数控制台 和 SLS 控制台 开通相关服务，确保账户下已开通服务并创建相应服务角色 SCF_QcsRole、SLS_QcsRole
+#进店领豆
+10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js, tag=进店领豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
 
-注意！为了确保权限足够，获取这两个参数时不要使用子账户！此外，腾讯云账户需要实名认证。
+#摇京豆
+5 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js, tag=摇京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyjd.png, enabled=true
 
+#京东全民开红包
+1 1 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true
 
-4.2 工具部署
-下载 Serverless 工具，快速部署函数
-npm install -g serverless
-执行部署命令
-serverless deploy
-如果已经配置了永久秘钥，则可以直接部署，如果没有，可以直接微信扫码登录腾讯云，并且授权部署。
-过几秒后，查看输出，可以看到函数和定时触发器都已经配置完成。
-serverless ⚡framework
-Action: "deploy" - Stage: "dev" - App: "jdscript" - Instance: "jdscript"
+#京豆变动通知
+2 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=京豆变动通知, enabled=true
 
-functionName: scf-jdscript
-description:  This is a function in jdscript application.
-namespace:    default
-runtime:      Nodejs12.16
-handler:      index.main_handler
-memorySize:   64
-lastVersion:  $LATEST
-traffic:      1
-triggers: 
-  timer: 
-    - timer-jdscript-dev
+#京东手机狂欢城
+1 0-18/6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_818.js, tag=京东手机狂欢城, enabled=true
 
-36s › jdscript › Success
+#京东星推官
+2 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_xtg.js, tag=京东星推官, enabled=true
+```
 
-5. 查看和测试
-登录后，在 腾讯云函数地址 点击管理控制台，查看最新部署的函数。
-在左侧栏的日志查询中，可以查看到触发的日志，包括是否打卡成功等。
+### 特别感谢(排名不分先后)：
+* [@NobyDa](https://github.com/NobyDa)
 
+* [@chavyleung](https://github.com/chavyleung)
 
-如果需要配置永久秘钥，则可以在访问秘钥页面获取账号的 TENCENT_SECRET_ID，TENCENT_SECRET_KEY，并配置在代码根目录 .env 文件中。
+* [@liuxiaoyucc](https://github.com/liuxiaoyucc)
 
+* [@Zero-S1](https://github.com/Zero-S1)
 
-Github Action 部署
-
-1. 开通服务
-依次登录 SCF 云函数控制台 和 SLS 控制台 开通相关服务，确保账户下已开通服务并创建相应服务角色 SCF_QcsRole、SLS_QcsRole
-
-注意！为了确保权限足够，获取这两个参数时不要使用子账户！此外，腾讯云账户需要实名认证。
+* [@uniqueque](https://github.com/uniqueque)
 
 
-2. 在这里新建一个访问密钥新建密钥
-
-
-将SecretId和SecretKey分别配置在仓库的secrets变量里面， TENCENT_SECRET_ID对应你的SecretId的值，TENCENT_SECRET_KEY对应你的SecretKey的值
-
-
-3. 配置自己需要secrets变量参考这里
-
-
-重要的说三遍
-
-
-如果涉及一个变量配置多个值，如多个cookie，多个取消订阅关键字，去掉里面的 空格 和 换行 使用 & 连接
-
-如果涉及一个变量配置多个值，如多个cookie，多个取消订阅关键字，去掉里面的 空格 和 换行 使用 & 连接
-
-如果涉及一个变量配置多个值，如多个cookie，多个取消订阅关键字，去掉里面的 空格 和 换行 使用 & 连接
-
-排查问题第一步先看自己腾讯云函数那边的环境变量跟自己在仓库配置的 secrets 是否一致
-
-
-
-4.执行action workflow进行部署，workflow未报错即部署成功
-
-
-5. 查看和测试
-登录后，在 腾讯云函数地址 点击管理控制台，查看最新部署的函数。
-在左侧栏的日志查询中，可以查看到触发的日志，包括是否打卡成功等。
-
-
-6. 设置触发器看这里 或者看这里的注释说明
+* [@nzw9314](https://github.com/nzw9314)
